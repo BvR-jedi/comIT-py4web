@@ -1633,11 +1633,12 @@ If any other element appears between them the tab panel will never be visible.
 ### `confirm_delete.html`
 
 ```html
+{% extends "base.html" %}
 <!-- templates/analysis/confirm_delete.html -->
 <!-- Shared by YearlyDeleteView and MonthlyDeleteView.
      Django's DeleteView provides {{ object }} (the instance to be deleted)
      automatically. cancel_url is added by our custom get_context_data(). -->
-{% extends "base.html" %}
+
 {% block title %}Confirm Delete{% endblock %}
 
 {% block content %}
